@@ -74,7 +74,7 @@ length(unique(apipop$dnum)) # 757
 table(apiclus1$dnum)
 length(unique(apiclus1$dnum)) # 15
 
-# What is the distribution of person weights in this sample?
+# What is the distribution of person weights in this sample
 hist(apiclus1$pw)
 unique(apiclus1$pw) # Assumes clusters (districts) are the same
 

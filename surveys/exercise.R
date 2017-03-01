@@ -69,16 +69,21 @@ stratified.design <- svydesign(id=~1,           # Sample directly (no clusters)
 # Here, we sample *districts*, and take all schools in those districts
 
 # Use the `table` function to see which district numbers (dnum) are present in the full dataset
-
+  
+table(apipop$dnum)
 
 # Use the `table` function to see which district numbers are present in apiclus1
 
+table(apiclus1$dnum)
 
 # What is the distribution of person weights in this sample?
 
+pw.dist <- unique(apiclus1$pw)
 
 # Specify multiple cluster designs: try with/without weights/fpc
 # We need to know the primary sampling unit (id) for each observation
+
+cl.design <- svydesign(id = ~dnum, weights = ~pw, fpc = ~fpc, data = apiclus1)
 
 
 # Compute the survey weighted mean for each design specified above
