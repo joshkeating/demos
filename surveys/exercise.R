@@ -80,6 +80,7 @@ table(apiclus1$dnum)
 
 pw.dist <- unique(apiclus1$pw)
 
+
 # Specify multiple cluster designs: try with/without weights/fpc
 # We need to know the primary sampling unit (id) for each observation
 
